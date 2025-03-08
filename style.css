@@ -1,0 +1,134 @@
+html, body {
+
+    height:100%;
+    padding: 0;
+    margin: 0;
+}
+
+#map {
+    width: 100%;
+    margin: 0;
+    height: 100%;
+}
+
+.info {
+    z-index: 1000;
+    position: absolute;
+    right: 40%;
+    top: 5%;
+    padding: 6px 8px;
+    font: 14px Arial, Helvetica, sans-serif;
+    text-align: center;
+    background: white;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #264381;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+ 
+h2 {
+    font-size: 25px;
+    color: #0851f0;
+    
+    padding: 10px 20px;
+    line-height: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+#console {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: auto;
+    background-color: #f0ebe8bb;
+    padding: 10px 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column; /* Change to row for horizontal layout */
+    align-items: center;
+    justify-content: center;
+    transform: scale(0.8); /* Reduces size to 70% */
+    transform-origin: top right; /* Ensures it scales from the top-right corner */
+}
+
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin: 0 10px; /* Add margin to separate button groups */
+}
+
+.button-group button {
+    flex: 1;
+    padding: 12px 20px; /* Add more padding for better appearance */
+    margin: 0 3px;
+    background-color: #3c5a9a;
+    color: white;
+    border: none;
+    border-radius: 25px; /* Large border-radius for capsule shape */
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    transition: background 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.button-group button:hover {
+    background: linear-gradient(135deg, #0f27d9, #2dc7bf); /* Reverse gradient on hover */
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.legend {
+    position: absolute;
+    bottom: 10px;
+    left: 10px; /* Change to right for bottom right corner */
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif;
+}
+
+.legend h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #14213D;
+}
+
+.legend ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.legend li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.legend li span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.legend .hev { background-color: #FF6384; }
+.legend .phev { background-color: #36A2EB; }
+.legend .bev { background-color: #f5b40f; }
+
+
+

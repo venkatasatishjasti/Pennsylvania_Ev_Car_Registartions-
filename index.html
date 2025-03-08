@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaflet Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    
+</head>
+<body>
+    <!-- Map Container -->
+    <div id="map"></div>
+
+    <!-- ECharts Pie Chart Container -->
+    <div id="echart-map" style="width: 100%; height: 600px;"></div>
+
+    <!-- Leaflet and MiniChart JS -->
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+    <!-- Turf.js for Centroid Calculation -->
+    <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    
+    <script type="module" src="script.js"></script>
+
+    <div id="console">
+        <h1>Pennsylvania EV Cars Registrations</h1>
+        <p><a>County wise</a> from 2023-2024</p>
+        <h2>Yearly</h2>
+        <div class="toggle-group" style="font-size: 1.5em; font-weight: bold; color: #333;">
+            <input id="all" type="radio" name="toggle" value="all" checked="checked" />
+            <label for="all">All</label>
+            <input id="year2023" type="radio" name="toggle" value="2023" />
+            <label for="year2023">2023</label>
+            <input id="year2024" type="radio" name="toggle" value="2024" />
+            <label for="year2024">2024</label>
+        </div>
+        <h2>Quarterly</h2>
+        <div class="toggle-group" style="font-size: 1.5em; font-weight: bold; color: #333;">
+            <input id="all" type="radio" name="toggle" value="all" checked="checked" />
+            <label for="all">All</label>
+            <input id="Q1" type="radio" name="toggle" value="Q1" />
+            <label for="Q1">Q1</label>
+            <input id="Q2" type="radio" name="toggle" value="Q2" />
+            <label for="Q2">Q2</label>
+            <input id="Q3" type="radio" name="toggle" value="Q3" />
+            <label for="Q3">Q3</label>
+            <input id="Q4" type="radio" name="toggle" value="Q4" />
+            <label for="Q4">Q4</label>
+        </div>
+    </div>
+        <div class="legend">
+            <h3>Types</h3>
+            <ul>
+                <li><span class="hev"></span>HEV</li>
+                <li><span class="phev"></span>PHEV</li>
+                <li><span class="bev"></span>BEV</li>
+            
+            </ul>
+        </div>
+    </div>
+    <!-- <div id="chart-container">
+        <h2>Quarterly EV Registrations by Car Model</h2>
+        <canvas id="chartCanvas"></canvas>
+    </div> -->
+    
+</div>    
+</body>
+</html>
